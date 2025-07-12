@@ -1,0 +1,137 @@
+:root {
+  --header-bg: #fff;
+  --sidebar-bg: rgba(230, 244, 234, 0.7);
+  --sidebar-highlight: rgba(46, 204, 113, 0.18);
+  --sidebar-text: #333;
+  --sidebar-active: #2ecc71;
+  --main-bg: #f7f9fa;
+  --text-color: #222;
+}
+body[data-theme='dark'] {
+  --header-bg: #23272f;
+  --sidebar-bg: rgba(40, 50, 60, 0.85);
+  --sidebar-highlight: rgba(46, 204, 113, 0.22);
+  --sidebar-text: #eee;
+  --sidebar-active: #2ecc71;
+  --main-bg: #181c22;
+  --text-color: #eee;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f9fa;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 72px;
+  background: var(--header-bg);
+  z-index: 200;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.app-container {
+  min-height: 100vh;
+  background: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  top: 72px; /* height of header */
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 72px);
+  z-index: 100;
+  background: var(--sidebar-bg);
+  box-shadow: 2px 0 8px #e6f4ea;
+}
+
+.layout-row {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 72px);
+  width: 100vw;
+  overflow: hidden;
+  margin-top: 72px; /* push below header */
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 220px; /* width of sidebar */
+  overflow-y: auto;
+  min-height: calc(100vh - 72px);
+  background: var(--main-bg);
+  width: calc(100vw - 220px);
+  max-width: calc(100vw - 220px);
+  box-sizing: border-box;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px 32px 16px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 70px;
+  }
+  .main-content {
+    margin-left: 70px;
+    width: calc(100vw - 70px);
+    max-width: calc(100vw - 70px);
+  }
+}

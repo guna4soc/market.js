@@ -1,0 +1,122 @@
+/* General utility classes */
+.dashboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dashboard-list-item {
+  background: var(--header-bg, #f9f9f9);
+  margin-bottom: 12px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px #e6f4ea;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+.dashboard-list-item.unread {
+  background: #fffbe6;
+  border-left: 4px solid #ffb300;
+}
+.dashboard-btn {
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 6px;
+  margin-left: 8px;
+  margin-top: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.dashboard-btn:hover {
+  background: #27ae60;
+}
+.dashboard-btn-danger {
+  background: #e74c3c;
+}
+.dashboard-btn-danger:hover {
+  background: #c0392b;
+}
+.dashboard-search {
+  margin: 18px 0 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dashboard-search input {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1px solid #e6f4ea;
+  font-size: 1rem;
+  width: 260px;
+}
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+}
+.dashboard-table th, .dashboard-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e6f4ea;
+  text-align: left;
+}
+.dashboard-table th {
+  background: #e6f4ea;
+  color: #222;
+}
+.dashboard-table tr:last-child td {
+  border-bottom: none;
+}
+.dashboard-cart-summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+.dashboard-alert {
+  background: #e6f4ea;
+  color: #1976d2;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.dashboard-settings-section {
+  background: var(--header-bg, #f9f9f9);
+  padding: 18px 22px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 4px #e6f4ea;
+}
+.dashboard-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.dashboard-form input[type="text"],
+.dashboard-form input[type="email"],
+.dashboard-form input[type="password"],
+.dashboard-form textarea,
+.dashboard-form select {
+  width: 100%;
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #e6f4ea;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+.dashboard-form textarea {
+  resize: vertical;
+}
+.dashboard-faqs {
+  margin-bottom: 24px;
+}
+.dashboard-support-form {
+  background: #f9f9f9;
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px #e6f4ea;
+}

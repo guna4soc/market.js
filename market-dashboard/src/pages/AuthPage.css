@@ -1,0 +1,200 @@
+/* Fix for lint error: remove stray bracket */
+/* (No code needed here, just removing the stray bracket at line 76) */
+.auth-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  padding: 0 5vw;
+}
+
+.auth-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  position: relative;
+}
+
+.typing-demo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #2bb1f7, 0 2px 8px #1de9b6;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  border-right: none;
+  animation: typing 2.5s steps(44, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 36ch }
+}
+
+
+.auth-bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  opacity: 0.7;
+  z-index: 0;
+}
+.auth-bg-circle1 {
+  width: 320px;
+  height: 320px;
+  left: -120px;
+  top: -80px;
+  background: radial-gradient(circle, #2bb1f7 60%, #1de9b6 100%);
+  opacity: 0.35;
+}
+.auth-bg-circle2 {
+  width: 140px;
+  height: 140px;
+  left: 180px;
+  top: 100px;
+  background: radial-gradient(circle, #1de9b6 60%, #2bb1f7 100%);
+  opacity: 0.25;
+}
+.auth-bg-circle3 {
+  width: 160px;
+  height: 160px;
+  left: 40px;
+  bottom: 80px;
+  background: radial-gradient(circle, #b721ff 60%, #1de9b6 100%);
+  opacity: 0.18;
+}
+
+.auth-card {
+  background: #fafdff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px 0 #b3e5fc55;
+  border: 1.5px solid #b3e5fc;
+  padding: 28px 18px 18px 18px;
+  min-width: 260px;
+  max-width: 280px;
+  width: 100%;
+  margin-left: 32px;
+  margin-right: 12vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.auth-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #1976d2;
+  text-align: center;
+}
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.auth-input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  font-size: 15px;
+  outline: none;
+  background: #f7fafc;
+  transition: border 0.2s;
+}
+.auth-input:focus {
+  border: 1.5px solid #1976d2;
+  background: #fff;
+}
+.auth-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.auth-btn:disabled {
+  background: #b0c4de;
+  cursor: not-allowed;
+}
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.auth-link {
+  color: #1976d2;
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0 2px;
+}
+.auth-link:hover {
+  color: #0d47a1;
+}
+.auth-error {
+  background: #ffeaea;
+  color: #d32f2f;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.auth-loggedin {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2f5;
+}
+.auth-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #e3e3e3;
+  padding: 24px 32px;
+  margin-bottom: 24px;
+}
+.auth-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #1976d2;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-logout-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.auth-logout-btn:hover {
+  background: #b71c1c;
+}

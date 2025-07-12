@@ -1,0 +1,357 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background: var(--header-bg, #fff);
+  box-shadow: 0 2px 8px #f0f1f2;
+  min-height: 72px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.astrolite-logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 8px;
+}
+.astrolite-logo-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.astrolite-logo-horizontal.pro {
+  font-size: 0.85rem; /* Slightly increased font size */
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  background: linear-gradient(90deg, #1976d2 30%, #e53935 60%, #222 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0;
+}
+.astro {
+  color: #1976d2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.o-red {
+  color: #e53935;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Segoe UI Black', 'Arial Black', Arial, sans-serif;
+  font-size: 0.75em; /* Further decreased size */
+  letter-spacing: 0.2px;
+  padding: 0 1px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(229,57,53,0.10);
+  border: 1px solid #e53935; /* Thinner border */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.85em;
+  min-height: 0.85em;
+  line-height: 1em;
+}
+.lite {
+  color: #222;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.tagline {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin-left: 2px;
+  font-weight: 400;
+  margin-top: -2px;
+}
+.astrolite-tagline {
+  font-size: 0.68rem;
+  color: #1976d2;
+  font-weight: 700;
+  margin-top: 2px;
+  margin-left: 0;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(90deg, #2ecc71 0%, #1976d2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.astrolite-tagline.pro-tagline {
+  font-size: 0.38rem; /* Further decreased font size */
+  font-weight: 600;
+  color: #1976d2;
+  letter-spacing: 0.7px;
+  text-align: center;
+  margin-top: 0;
+  background: linear-gradient(90deg, #1976d2 0%, #e53935 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.tagline-key {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 0.38rem; /* Further decreased font size */
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  margin-left: 12px;
+  cursor: pointer;
+  color: #1976d2;
+  display: flex;
+  align-items: center;
+}
+.menu-btn.small {
+  font-size: 1.6rem; /* Increased menu button size */
+  padding: 6px 14px;
+  min-width: 0;
+  min-height: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 7px;
+}
+.menu-icon {
+  font-size: 1.6rem;
+}
+.buy-sell-toggle {
+  display: flex;
+  gap: 0;
+  margin-left: 12px;
+}
+.buy-sell-toggle button {
+  background: #ffe066;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px 0 0 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.buy-sell-toggle button:last-child {
+  border-radius: 0 8px 8px 0;
+  background: #e0e0e0;
+  margin-left: -2px;
+}
+.buy-sell-toggle button.active {
+  background: #2ecc71;
+  color: #fff;
+}
+.buy-sell-toggle.small button {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+.buy-sell-toggle.small {
+  margin-left: 6px;
+}
+.header-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.search {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  min-width: 260px;
+  font-size: 1rem;
+}
+.header-center .search.creative {
+  min-width: 220px;
+  font-size: 0.98rem;
+  border: 2px solid #1976d2;
+  background: #f7faff;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px #e6f4ea;
+  outline: none;
+}
+.header-center .search.creative:focus {
+  box-shadow: 0 2px 12px #b3e5fc;
+  border-color: #2ecc71;
+}
+.mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: 8px;
+  cursor: pointer;
+  color: #1976d2;
+  display: flex;
+  align-items: center;
+}
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+.user-icon {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+.username {
+  display: none;
+}
+.user-email {
+  font-size: 0.98rem;
+  color: #1976d2;
+  font-weight: 500;
+  margin-left: 2px;
+}
+.user-profile-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.user-profile-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.user-profile-btn:hover, .user-profile-btn:focus {
+  background: #f0f4fa;
+}
+.chevron {
+  font-size: 1rem;
+  color: #888;
+}
+.right-icon {
+  font-size: 1.25rem !important;
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 0;
+  transition: background 0.15s;
+}
+.right-icon:hover, .right-icon:focus {
+  background: #f0f4fa;
+}
+.email-wrapper, .notif-wrapper, .user-profile-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.email-dropdown {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  min-width: 180px;
+  z-index: 100;
+  padding: 10px 18px;
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: left;
+}
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  min-width: 180px;
+  z-index: 100;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.profile-email {
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 18px 6px 18px;
+  border-bottom: 1px solid #f0f1f2;
+}
+.tagline {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin-left: 2px;
+  font-weight: 400;
+  margin-top: -2px;
+}
+.astrolite-tagline {
+  font-size: 0.68rem;
+  color: #1976d2;
+  font-weight: 700;
+  margin-top: 2px;
+  margin-left: 0;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(90deg, #2ecc71 0%, #1976d2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.astrolite-tagline.pro-tagline {
+  font-size: 0.38rem; /* Further decreased font size */
+  font-weight: 600;
+  color: #1976d2;
+  letter-spacing: 0.7px;
+  text-align: center;
+  margin-top: 0;
+  background: linear-gradient(90deg, #1976d2 0%, #e53935 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.tagline-key {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 0.38rem; /* Further decreased font size */
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
